@@ -1,17 +1,18 @@
 import styled from "styled-components";
 import Specs from "./Specs";
 
+const Container = styled.div`
+  background: #fff;
+  margin-top: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  padding: 0.6em;
+  display: flex;
+  justify-content: space-around;
+`;
+
 export default function DisplayDetails() {
-  const Container = styled.div`
-    background: #fff;
-    margin-top: 5em;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-    padding: 0.6em;
-    display: flex;
-    justify-content: space-around;
-  `;
   return (
     <Container>
       <Specs title="Words" value="0" />

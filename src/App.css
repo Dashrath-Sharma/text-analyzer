@@ -1,6 +1,44 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+/* *::-ms-input-placeholder { 
+  color: red;
+} */
+
+/* *::placeholder {
+  color: red;
+}  */
+
 body{
   background:#f0f2f5;
 }
 .App {
   text-align: center;
+}
+
+.text-area{
+  padding:30px;
+  margin:2em 0;
+  outline:none;
+  border:1px solid #f0f2f5;
+  resize: none;
+  width:75%;
+  min-height: 400px;
+  font-size: 20px;
+}
+
+.text-area::-webkit-input-placeholder{
+
+}
+
+.text-area::-moz-placeholder{
+
+}
+
+.text-area::placeholder{
+  color: #e6e6e6;
+  font-weight: 900;
 }
