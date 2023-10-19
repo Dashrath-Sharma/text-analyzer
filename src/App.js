@@ -1,5 +1,5 @@
 import "./App.css";
-import DisplayDetails from "./UI/DisplayDetails";
+import DisplayCounters from "./UI/DisplayCounters";
 import Header from "./UI/Header";
 import WritingArea from "./UI/WritingArea";
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <DisplayDetails />
+      <DisplayCounters />
       <WritingArea />
     </div>
   );

@@ -12,7 +12,7 @@ const Container = styled.div`
   justify-content: space-around;
 `;
 
-export default function DisplayDetails() {
+export default function DisplayCounters() {
   return (
     <Container>
       <Specs title="Words" value="0" />
