@@ -3,7 +3,7 @@ import Specs from "./Specs";
 
 const Container = styled.div`
   background: #fff;
-  margin-top: 5em;
+  margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
   width: 75%;
