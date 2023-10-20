@@ -19,7 +19,9 @@ export function countSentences(string) {
   return string.split(/\./gm).length;
 }
 
-export function countParagraphs(string) {}
+export function countParagraphs(string) {
+    return string.split(/\n+/gm).length;
+}
 
 export function countPronouns(string) {
   return string
@@ -27,7 +29,9 @@ export function countPronouns(string) {
     .reduce((s, x) => (s += pronounsObject[x.toLowerCase()] ? 1 : 0), 0);
 }
 
-export function getReadingTime(string) {}
+export function getReadingTime(string) {
+    return Math.ceil(countWords(string)/200);
+}
 
 export function getLongestWord(string) {
     string = string.split(/\s/gmi)
