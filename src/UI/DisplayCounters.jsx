@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Specs from "./Specs";
+import { useContext } from "react";
+import TextContext from "../context/TextContext";
 
 const Container = styled.div`
   background: #fff;
@@ -13,13 +15,15 @@ const Container = styled.div`
 `;
 
 export default function DisplayCounters() {
+  const { textDetails } = useContext(TextContext);
+  const {Words, Characters, Sentences, Paragraphs, Pronouns } = textDetails;
   return (
     <Container>
-      <Specs title="Words" value="0" />
-      <Specs title="Characters" value="0" />
-      <Specs title="Sentences" value="0" />
-      <Specs title="Pragraphs" value="0" />
-      <Specs title="Pronouns" value="0" />
+      <Specs title="Words" value={Words} />
+      <Specs title="Characters" value={Characters} />
+      <Specs title="Sentences" value={Sentences} />
+      <Specs title="Paragraphs" value={Paragraphs} />
+      <Specs title="Pronouns" value={Pronouns} />
     </Container>
   );
 }

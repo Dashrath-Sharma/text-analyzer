@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import ReadTimeNLongestWord from "./ReadTimeNLongestWord";
+import { useContext } from "react";
+import TextContext from '../context/TextContext'
 
 const Container1 = styled.div`
   background: #fff;
@@ -12,11 +14,13 @@ const Container1 = styled.div`
   justify-content: space-around;
 `;
 
-export default function Container(){
-return(
-  <Container1>
-    <ReadTimeNLongestWord title="Average Reading Time" value="" />
-    <ReadTimeNLongestWord title="Longest word" value="" />
-  </Container1>
-)
+export default function Container() {
+  const { textDetails } = useContext(TextContext);
+  const { LongestWord, ReadingTime } = textDetails;
+  return (
+    <Container1>
+      <ReadTimeNLongestWord title="Average Reading Time" value={LongestWord} />
+      <ReadTimeNLongestWord title="Longest word" value={ReadingTime} />
+    </Container1>
+  );
 }

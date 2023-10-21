@@ -12,7 +12,7 @@ export function countWords(string) {
 }
 
 export function countCharacters(string) {
-  return string.split('').length;
+  return string.split("").length;
 }
 
 export function countSentences(string) {
@@ -20,7 +20,7 @@ export function countSentences(string) {
 }
 
 export function countParagraphs(string) {
-    return string.split(/\n+/gm).length;
+  return string.split(/\n+/gm).length;
 }
 
 export function countPronouns(string) {
@@ -30,16 +30,16 @@ export function countPronouns(string) {
 }
 
 export function getReadingTime(string) {
-  const minutes = Math.ceil(countWords(string)/200);
-    return minutes>1 ? `~ ${minutes} minutes` : `~ ${minutes} minute`;
+  const minutes = Math.ceil(countWords(string) / 200);
+  return minutes > 1 ? `~ ${minutes} minutes` : `~ ${minutes} minute`;
 }
 
 export function getLongestWord(string) {
-    string = string.split(/\s/gmi)
-    const logestWord = string.reduce((s,x) => {
-        let len = x.length;
-        let slen = s?.length;
-       return slen<len ? x : s;
-      },'');
-      return logestWord;
+  string = string.split(/\s+/gim);
+  const logestWord = string.reduce((s, x) => {
+    let len = x?.length;
+    let slen = s?.length;
+    return slen < len ? x : s;
+  }, "");
+  return logestWord;
 }
