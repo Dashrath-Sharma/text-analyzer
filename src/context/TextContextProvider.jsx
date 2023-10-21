@@ -1,13 +1,6 @@
 import { useState } from "react";
 import TextContext from "./TextContext";
 
-// countWords
-// countSentences
-// countParagraph
-// countPronouns
-// findLongestWord
-// calculateReadingTime
-
 export default function TextContextProvider({children}){
     const [textDetails, setTextDetails] = useState({
         Words:0,

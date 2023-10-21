@@ -30,7 +30,8 @@ export function countPronouns(string) {
 }
 
 export function getReadingTime(string) {
-    return Math.ceil(countWords(string)/200);
+  const minutes = Math.ceil(countWords(string)/200);
+    return minutes>1 ? `~ ${minutes} minutes` : `~ ${minutes} minute`;
 }
 
 export function getLongestWord(string) {
